@@ -2,7 +2,7 @@
 
 A GitHub Actions-based Steam stats fetcher that automatically updates a Discord application profile widget.
 
-Runs every 2 days or manually via workflow dispatch.
+Runs every 1 days or manually via workflow dispatch.
 
 ---
 
