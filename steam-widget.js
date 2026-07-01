@@ -203,8 +203,6 @@ async function main() {
 
     log("Starting updater...");
 
-    async function main() {
-
     log("Fetching Steam data...");
 
     const [
@@ -417,8 +415,6 @@ async function main() {
     await updateDiscordWidget(widget);
 
     log("Steam widget update completed successfully.");
-
-}
 
 }
 
