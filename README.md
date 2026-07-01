@@ -126,10 +126,10 @@ Check logs for:
 
 ## Automatic Updates
 
-Runs every 2 days (UTC):
+Runs every 1 days (UTC):
 
 ```yaml
-0 0 */2 * *
+0 0 */1 * *
 ```
 
 ---

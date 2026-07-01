@@ -1,11 +1,7 @@
-// ============================================================================
 // Steam → Discord Widget Updater
 // Runs in GitHub Actions
-// ============================================================================
 
-// -------------------------------
 // Environment Variables
-// -------------------------------
 
 const {
     STEAM_API_KEY,
@@ -15,9 +11,7 @@ const {
     DISCORD_USER_ID
 } = process.env;
 
-// -------------------------------
 // Validate Secrets
-// -------------------------------
 
 const requiredSecrets = [
     "STEAM_API_KEY",
@@ -33,25 +27,19 @@ for (const secret of requiredSecrets) {
     }
 }
 
-// -------------------------------
 // Logging
-// -------------------------------
 
 function log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);
 }
 
-// -------------------------------
 // Delay Helper
-// -------------------------------
 
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// -------------------------------
 // Fetch JSON with Retries
-// -------------------------------
 
 async function steam(url, retries = 3) {
 
@@ -95,9 +83,7 @@ async function steam(url, retries = 3) {
 
 }
 
-// -------------------------------
-// Profile Age
-// -------------------------------
+// Account Age
 
 async function getProfileAge() {
 
@@ -159,9 +145,7 @@ async function getProfileAge() {
 
 }
 
-// -------------------------------
 // Discord Widget Updater
-// -------------------------------
 
 async function updateDiscordWidget(widget) {
 
@@ -195,13 +179,9 @@ async function updateDiscordWidget(widget) {
 
 }
 
-// -------------------------------
 // Main
-// -------------------------------
 
 async function main() {
-
-    log("Starting updater...");
 
     log("Fetching Steam data...");
 
@@ -254,9 +234,7 @@ async function main() {
     const recentGames =
         recent.response.games || [];
 
-    // -------------------------------------------------
-    // Lifetime playtime
-    // -------------------------------------------------
+    // Overall playtime
 
     const totalMinutes =
         games.reduce(
@@ -268,9 +246,7 @@ async function main() {
     const totalPlaytimeMs =
         totalMinutes * 60000;
 
-    // -------------------------------------------------
     // Most Played Game
-    // -------------------------------------------------
 
     let mostPlayed = null;
 
@@ -292,9 +268,7 @@ async function main() {
 
     }
 
-    // -------------------------------------------------
     // Two Week Playtime
-    // -------------------------------------------------
 
     const recentMinutes =
         recentGames.reduce(
@@ -306,37 +280,27 @@ async function main() {
     const recentPlaytimeMs =
         recentMinutes * 60000;
 
-    // -------------------------------------------------
-    // Friends
-    // -------------------------------------------------
+    // Friends Count
 
     const friendCount =
         friendsRaw.friendslist?.friends?.length || 0;
 
-    // -------------------------------------------------
-    // Badges
-    // -------------------------------------------------
+    // Badges Count
 
     const badgeCount =
         badges.response?.badges?.length || 0;
 
-    // -------------------------------------------------
     // Owned Games
-    // -------------------------------------------------
 
     const ownedGames =
         games.length;
 
-    // -------------------------------------------------
     // Steam Level
-    // -------------------------------------------------
 
     const steamLevel =
         level.response.player_level || 0;
 
-    // -------------------------------------------------
     // Console Summary
-    // -------------------------------------------------
 
     log("-----------------------------");
     log(`User: ${player?.personaname}`);
