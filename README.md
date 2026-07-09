@@ -8,13 +8,7 @@ Runs every 3 days or manually via workflow dispatch.
 
 ## Importing the Discord Widget
 
-This repository includes a pre-configured widget layout file:
-
-```
-
-widget-layout.json
-
-```
+This repository includes a pre-configured widget layout file: [widget-layout.json](https://github.com/ItsDenji777/SteamWidgetUpdater/blob/main/widget-layout.json)
 
 This file is used only for importing the widget layout into Discord. It is not required for the Node.js script to run.
 
