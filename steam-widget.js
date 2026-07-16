@@ -184,17 +184,14 @@ async function main() {
 
   const totalPlaytimeMs = totalMinutes * 60000;
 
-  // Most Played Game
+  // Recently Played Game (highest 2‑week playtime)
+  let recentlyPlayed = null;
 
-  let mostPlayed = null;
-
-  if (games.length > 0) {
-    mostPlayed = games.reduce((highest, current) => {
-      if ((current.playtime_forever || 0) > (highest.playtime_forever || 0)) {
-        return current;
-      }
-
-      return highest;
+  if (recentGames.length > 0) {
+    recentlyPlayed = recentGames.reduce((top, game) => {
+      return (game.playtime_2weeks || 0) > (top.playtime_2weeks || 0)
+        ? game
+        : top;
     });
   }
 
@@ -232,7 +229,7 @@ async function main() {
   log(`Friends: ${friendCount}`);
   log(`Badges: ${badgeCount}`);
   log(`Profile Age: ${profileAge}`);
-  log(`Most Played: ${mostPlayed?.name ?? "None"}`);
+  log(`Recently Played: ${recentlyPlayed?.name ?? "None"}`);
   log("-----------------------------");
 
   log("Building widget payload...");
@@ -247,8 +244,8 @@ async function main() {
         },
         {
           type: 1,
-          name: "most_played",
-          value: mostPlayed?.name || "No Games",
+          name: "most_played", // widget field name unchanged; displays recently played game
+          value: recentlyPlayed?.name || "No Recent Games",
         },
         {
           type: 1,
