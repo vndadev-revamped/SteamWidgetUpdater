@@ -244,49 +244,49 @@ async function main() {
         },
         {
           type: 1,
-          name: "most_playedㅤ", // widget field name unchanged; displays recently played game
+          name: "most_played", // widget field name unchanged; displays recently played game
           value: recentlyPlayed?.name || "No Recent Games",
         },
         {
           type: 1,
-          name: "steam_levelㅤ",
+          name: "steam_level",
           value: String(steamLevel),
         },
         {
           type: 3,
-          name: "pfpㅤ",
+          name: "pfp",
           value: {
             url: player?.avatarfull || "",
           },
         },
         {
           type: 2,
-          name: "playtimeㅤ",
+          name: "playtime",
           value: totalPlaytimeMs,
         },
         {
           type: 2,
-          name: "owned_gamesㅤ",
+          name: "owned_games",
           value: ownedGames,
         },
         {
           type: 2,
-          name: "recent_twoweekㅤ",
+          name: "recent_twoweek",
           value: recentPlaytimeMs,
         },
         {
           type: 2,
-          name: "friendsㅤ",
+          name: "friends",
           value: friendCount,
         },
         {
           type: 2,
-          name: "badge_countㅤ",
+          name: "badge_count",
           value: badgeCount,
         },
         {
           type: 1,
-          name: "profile_ageㅤ",
+          name: "profile_age",
           value: profileAge,
         },
       ],
