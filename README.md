@@ -1,3 +1,11 @@
+# Steam Widget Updater
+
+> **Original project by [@ItsDenji777](https://github.com/ItsDenji777)** — [github.com/ItsDenji777/SteamWidgetUpdater](https://github.com/ItsDenji777/SteamWidgetUpdater)
+>
+> This is a fork. All credit for the code, widget layout, and original idea goes to ItsDenji777.
+
+---
+
 <h1 align=center>Steam Widget Updater<br><img src="logo.png" width="110px"></h1>
 <h3 align=center>I'd appreciate it if you could give my project a star :) ⭐</h3>
 
@@ -56,7 +64,7 @@ Then clone your fork (optional):
 ```bash
 git clone https://github.com/YOUR_USERNAME/SteamWidgetUpdater.git
 cd SteamWidgetUpdater
-````
+```
 
 ---
 
@@ -175,3 +183,10 @@ Incorrect APPLICATION_ID or DISCORD_USER_ID.
 >* Never hardcode secrets in code
 >* Never commit .env files
 >* Always use GitHub Secrets
+
+---
+
+## Credits
+
+- **Original project:** [ItsDenji777/SteamWidgetUpdater](https://github.com/ItsDenji777/SteamWidgetUpdater) by [@ItsDenji777](https://github.com/ItsDenji777)
+- **Widget Extension:** [TheCreativeGod/Discord-Widgets-Extension](https://github.com/TheCreativeGod/Discord-Widgets-Extension)
