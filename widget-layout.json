@@ -21,7 +21,7 @@
             "icon": {
               "value_type": "application_asset",
               "presentation_type": "image",
-              "value": "icon_games"
+              "value": "controller"
             }
           }
         },
@@ -40,7 +40,7 @@
             "icon": {
               "value_type": "application_asset",
               "presentation_type": "image",
-              "value": "icon_playtime"
+              "value": "clock"
             }
           }
         },
@@ -59,7 +59,7 @@
             "icon": {
               "value_type": "application_asset",
               "presentation_type": "image",
-              "value": "icon_recent"
+              "value": "recent"
             }
           }
         },
@@ -78,7 +78,7 @@
             "icon": {
               "value_type": "application_asset",
               "presentation_type": "image",
-              "value": "icon_friends"
+              "value": "friends"
             }
           }
         },
@@ -97,7 +97,7 @@
             "icon": {
               "value_type": "application_asset",
               "presentation_type": "image",
-              "value": "icon_badges"
+              "value": "badge"
             }
           }
         },
@@ -116,7 +116,7 @@
             "icon": {
               "value_type": "application_asset",
               "presentation_type": "image",
-              "value": "icon_age"
+              "value": "calendar"
             }
           }
         }
