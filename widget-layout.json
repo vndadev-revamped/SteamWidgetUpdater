@@ -6,20 +6,6 @@
     "widget_bottom": {
       "layout": "widget_bottom_stats",
       "components": {
-        "stat_5": {
-          "fields": {
-            "value": {
-              "value_type": "data",
-              "presentation_type": "number",
-              "value": "badge_count"
-            },
-            "label": {
-              "value_type": "custom_string",
-              "presentation_type": "text",
-              "value": "Badges"
-            }
-          }
-        },
         "stat_1": {
           "fields": {
             "value": {
@@ -31,20 +17,11 @@
               "value_type": "custom_string",
               "presentation_type": "text",
               "value": "Games Owned"
-            }
-          }
-        },
-        "stat_3": {
-          "fields": {
-            "value": {
-              "value_type": "data",
-              "presentation_type": "duration",
-              "value": "recent_twoweek"
             },
-            "label": {
-              "value_type": "custom_string",
-              "presentation_type": "text",
-              "value": "Recent (2w) hours"
+            "icon": {
+              "value_type": "application_asset",
+              "presentation_type": "image",
+              "value": "icon_games"
             }
           }
         },
@@ -59,6 +36,30 @@
               "value_type": "custom_string",
               "presentation_type": "text",
               "value": "Total Playtime"
+            },
+            "icon": {
+              "value_type": "application_asset",
+              "presentation_type": "image",
+              "value": "icon_playtime"
+            }
+          }
+        },
+        "stat_3": {
+          "fields": {
+            "value": {
+              "value_type": "data",
+              "presentation_type": "duration",
+              "value": "recent_twoweek"
+            },
+            "label": {
+              "value_type": "custom_string",
+              "presentation_type": "text",
+              "value": "Recent (2w)"
+            },
+            "icon": {
+              "value_type": "application_asset",
+              "presentation_type": "image",
+              "value": "icon_recent"
             }
           }
         },
@@ -73,6 +74,30 @@
               "value_type": "custom_string",
               "presentation_type": "text",
               "value": "Friends"
+            },
+            "icon": {
+              "value_type": "application_asset",
+              "presentation_type": "image",
+              "value": "icon_friends"
+            }
+          }
+        },
+        "stat_5": {
+          "fields": {
+            "value": {
+              "value_type": "data",
+              "presentation_type": "number",
+              "value": "badge_count"
+            },
+            "label": {
+              "value_type": "custom_string",
+              "presentation_type": "text",
+              "value": "Badges"
+            },
+            "icon": {
+              "value_type": "application_asset",
+              "presentation_type": "image",
+              "value": "icon_badges"
             }
           }
         },
@@ -87,6 +112,11 @@
               "value_type": "custom_string",
               "presentation_type": "text",
               "value": "Profile Age"
+            },
+            "icon": {
+              "value_type": "application_asset",
+              "presentation_type": "image",
+              "value": "icon_age"
             }
           }
         }
